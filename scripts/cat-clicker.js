@@ -1,7 +1,9 @@
+var clickCounter = 0;
 $(function () {
-  var clickCounter = 0;
-  $("img").on("click", function() {
+  console.log("test");
+
+  $("img").click(function() {
     clickCounter++;
-    $("#clicker").html = clickCounter;
-  })
+    $("#clicker").html(clickCounter);
+  });
 })
