@@ -26,10 +26,24 @@ img {
 
 ul {
   list-style-type: none;
+  float: right;
+  margin-top: 50px;
+  margin-right: 50px;
 }
 
 li {
   margin: 2px;
+  border: 1px solid #aaa;
   border-radius: 5px;
   cursor: pointer;
+  padding: 10px;
+}
+
+#admin-area {
+  display: none;
+}
+
+fieldset {
+  width: 30%;
+  margin-left: 70px;
 }

@@ -17,8 +17,25 @@
       <ul id="cat-list"></ul>
       <div id="cat-wrapper" >
           <h2 id="cat-name"></h2>
-          <img src="" alt="cute cat" id="cat-img" height="480" width="auto">
+          <img src="" alt="cute cat" id="cat-img" height="320" width="auto">
           <div id="cat-count"></div>
+          <button id="toggleAdminView">Admin</button>
+      </div>
+      <div id="admin-area">
+        <form action="">
+          <fieldset>
+            <legend>Cat attributes:</legend>
+            <label for="name">Name:</label>
+            <input id="name" type="text"><br>
+            <label for="path">File path:</label>
+            <input id="path" type="text"><br>
+            <label for="clicks"># of Clicks:</label>
+            <input id="clicks" type="text"><br>
+            <!-- <input id="submit" type="submit" value="Submit"> -->
+            <button id="submit">Submit</button>
+            <button id="cancel">Cancel</button>
+          </fieldset>
+        </form>
       </div>
 <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>

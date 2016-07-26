@@ -1,6 +1,7 @@
 //Model
   var model = {
     currentCat: null,
+    adminView: false,
     cats : [
           {
             name: "Cutie Pie",
@@ -39,6 +40,7 @@
       //initialize the views
       viewButtons.init();
       viewCats.init();
+      adminView.init();
     },
 
     countClicks: function() {
@@ -57,7 +59,31 @@
 
     setCurrentCat: function(cat) {
       model.currentCat = cat;
+    },
+
+    toggleAdminView: function() {
+      if(model.adminView === false) {
+        model.adminView = true;
+        adminView.render();
+      }
+      else {
+        model.adminView = false;
+        adminView.hide();
+      }
+    },
+
+    updateCats: function(name, path, clicks) {
+      if(name) {
+        model.currentCat.name = name;
+      }
+      if(path) {
+        model.currentCat.path = path;
+      }
+      if(clicks) {
+        model.currentCat.clicks = clicks;
+      }
     }
+
   };
   // Button View
   var viewButtons = {
@@ -113,5 +139,43 @@
       controller.countClicks(catId);
     }
   };
+// Admin view
+  var adminView = {
+    init: function() {
+      //initialize the admin view controls
+      this.adminButton = document.getElementById("toggleAdminView");
+      this.adminArea = document.getElementById("admin-area");
+      this.adminButton.addEventListener("click", function() {
+        controller.toggleAdminView();
+      });
+      //initialize the input controls
+      this.nameInput = document.getElementById("name");
+      this.pathInput = document.getElementById("path");
+      this.clicksInput = document.getElementById("clicks");
+      this.submitButton = document.getElementById("submit");
+      this.cancelButton = document.getElementById("cancel");
+      
+      //assign click events to buttons
+      this.submitButton.addEventListener("click", function() {
+        controller.updateCats(this.nameInput.value, this.pathInput.value, this.clicksInput.value);
 
-  controller.init();
+        viewCats.render();
+      });
+      this.cancelButton.addEventListener("click", function() {
+        this.render();
+      });
+    },
+
+    render: function() {
+      this.nameInput.value = "";
+      this.pathInput.value = "";
+      this.clicksInput.value = "";
+      this.adminArea.style.display = "block";
+    },
+
+    hide: function() {
+      this.adminArea.style.display = "none";
+    }
+  };
+
+controller.init();
