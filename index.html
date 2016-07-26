@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <title>Cat-clicker by Holic101</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
   </head>
   <body>
-    <section class="page-header text-center">
+<!-- Header Section -->
+    <!-- <section class="page-header text-center">
       <h1 class="project-name">Cat-clicker</h1>
       <h2 class="project-tagline">An app that counts the clicks on a cat picture as part of the Udacity JS Design Patterns Course</h2>
       <a href="https://github.com/Holic101/cat-clicker" class="btn">View on GitHub</a>
-      <a href="https://github.com/Holic101/cat-clicker/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/Holic101/cat-clicker/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
-    <div class="container-fluid">
-      <div class="row text-center">
-        <div class="col-lg-12 col-md-12 col-xs-12">
-          <img alt="cat picture" src="img/cute_cat.jpg" width="640px" height="auto">
-          <p class="clickCounter "id="clicker">0</p>
-        </div>
+    </section> -->
+<!-- Main Section -->
+      <ul id="cat-list"></ul>
+      <div id="cat-wrapper" >
+          <h2 id="cat-name"></h2>
+          <img src="" alt="cute cat" id="cat-img" height="480" width="auto">
+          <div id="cat-count"></div>
       </div>
-    </div>
-
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script src="scripts/cat-clicker.js"></script>
+<!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="js/cat-clicker.js"></script>
   </body>
 </html>

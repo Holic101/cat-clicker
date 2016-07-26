@@ -7,11 +7,29 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #606c71; }
+  color: #606c71;
+  text-align: center;
+}
 
 .clickCounter {
+  margin-top: 40px;
   font-size: 3.5rem;
   color: darkblue;
   height: 100px;
   width: auto;
+}
+
+img {
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px #ddd;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 2px;
+  border-radius: 5px;
+  cursor: pointer;
 }
